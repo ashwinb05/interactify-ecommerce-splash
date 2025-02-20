@@ -13,6 +13,7 @@ interface CategorySectionProps {
     price: number;
     image: string;
     category: string;
+    subcategory: string;
     rating: number;
   }>;
 }

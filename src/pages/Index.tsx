@@ -10,6 +10,7 @@ const laptopProducts = [
     price: 129999,
     image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format",
     category: "Laptops",
+    subcategory: "Premium Laptops",
     rating: 4.8
   },
   {
@@ -18,6 +19,7 @@ const laptopProducts = [
     price: 94999,
     image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format",
     category: "Laptops",
+    subcategory: "Premium Laptops",
     rating: 4.6
   },
   {
@@ -26,6 +28,7 @@ const laptopProducts = [
     price: 89999,
     image: "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=500&auto=format",
     category: "Laptops",
+    subcategory: "2-in-1 Laptops",
     rating: 4.5
   },
   {
@@ -34,6 +37,7 @@ const laptopProducts = [
     price: 79999,
     image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format",
     category: "Laptops",
+    subcategory: "Business Laptops",
     rating: 4.4
   }
 ];
@@ -45,6 +49,7 @@ const smartphoneProducts = [
     price: 119999,
     image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&auto=format",
     category: "Smartphones",
+    subcategory: "iOS Devices",
     rating: 4.7
   },
   {
@@ -53,6 +58,7 @@ const smartphoneProducts = [
     price: 124999,
     image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&auto=format",
     category: "Smartphones",
+    subcategory: "Android Flagship",
     rating: 4.6
   },
   {
@@ -61,6 +67,7 @@ const smartphoneProducts = [
     price: 69999,
     image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format",
     category: "Smartphones",
+    subcategory: "Android Flagship",
     rating: 4.5
   },
   {
@@ -69,6 +76,7 @@ const smartphoneProducts = [
     price: 64999,
     image: "https://images.unsplash.com/photo-1544866092-1935c5ef2a8f?w=500&auto=format",
     category: "Smartphones",
+    subcategory: "Android Flagship",
     rating: 4.4
   }
 ];
@@ -80,6 +88,7 @@ const accessoryProducts = [
     price: 24999,
     image: "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=500&auto=format",
     category: "Accessories",
+    subcategory: "Audio",
     rating: 4.6
   },
   {
@@ -88,6 +97,7 @@ const accessoryProducts = [
     price: 29999,
     image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format",
     category: "Accessories",
+    subcategory: "Wearables",
     rating: 4.5
   },
   {
@@ -96,6 +106,7 @@ const accessoryProducts = [
     price: 27999,
     image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&auto=format",
     category: "Accessories",
+    subcategory: "Audio",
     rating: 4.8
   },
   {
@@ -104,6 +115,7 @@ const accessoryProducts = [
     price: 79999,
     image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format",
     category: "Accessories",
+    subcategory: "Tablets",
     rating: 4.7
   }
 ];

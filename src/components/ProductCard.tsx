@@ -7,10 +7,11 @@ interface ProductCardProps {
   price: number;
   image: string;
   category: string;
+  subcategory: string;
   rating: number;
 }
 
-const ProductCard = ({ title, price, image, category, rating }: ProductCardProps) => {
+const ProductCard = ({ title, price, image, category, subcategory, rating }: ProductCardProps) => {
   return (
     <Card className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg animate-scale-up bg-gradient-to-br from-white to-muted/30">
       <div className="aspect-square overflow-hidden">
@@ -21,7 +22,10 @@ const ProductCard = ({ title, price, image, category, rating }: ProductCardProps
         />
       </div>
       <div className="p-4 space-y-2">
-        <p className="text-sm text-muted-foreground mb-1 animate-fade-in">{category}</p>
+        <div className="space-y-1">
+          <p className="text-sm text-muted-foreground mb-1 animate-fade-in">{category}</p>
+          <p className="text-xs text-muted-foreground/80 animate-fade-in">{subcategory}</p>
+        </div>
         <h3 className="font-semibold text-lg mb-2 truncate group-hover:text-primary transition-colors">{title}</h3>
         <div className="flex items-center justify-between animate-fade-in">
           <p className="text-lg font-bold text-secondary animate-float">₹{price.toLocaleString()}</p>
