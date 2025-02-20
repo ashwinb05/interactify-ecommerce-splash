@@ -31,16 +31,18 @@ const CategorySection = ({ title, products }: CategorySectionProps) => {
   };
 
   return (
-    <section className="py-8 animate-fade-in relative group">
+    <section className="py-8 relative group bg-gradient-to-r from-muted to-white">
       <div className="container">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold">{title}</h2>
-          <div className="flex gap-2">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-fade-in">
+            {title}
+          </h2>
+          <div className="flex gap-2 animate-fade-in">
             <Button
               variant="outline"
               size="icon"
               onClick={() => scroll('left')}
-              className="opacity-0 group-hover:opacity-100 transition-opacity"
+              className="opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-white"
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
@@ -48,21 +50,21 @@ const CategorySection = ({ title, products }: CategorySectionProps) => {
               variant="outline"
               size="icon"
               onClick={() => scroll('right')}
-              className="opacity-0 group-hover:opacity-100 transition-opacity"
+              className="opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-white"
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>
         </div>
-        <ScrollArea className="w-full whitespace-nowrap rounded-lg">
+        <ScrollArea className="w-full whitespace-nowrap rounded-lg p-1">
           <div className="flex space-x-4 p-4" ref={scrollRef}>
             {products.map((product) => (
-              <div key={product.id} className="w-[250px] flex-none">
+              <div key={product.id} className="w-[250px] flex-none transform transition-transform hover:translate-y-[-5px]">
                 <ProductCard {...product} />
               </div>
             ))}
           </div>
-          <ScrollBar orientation="horizontal" />
+          <ScrollBar orientation="horizontal" className="bg-primary/20" />
         </ScrollArea>
       </div>
     </section>
