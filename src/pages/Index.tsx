@@ -3,108 +3,108 @@ import React from 'react';
 import Header from '@/components/Header';
 import CategorySection from '@/components/CategorySection';
 
-const beautyProducts = [
+const laptopProducts = [
   {
     id: 1,
-    title: "Natural Face Cream",
-    price: 999,
-    image: "https://images.unsplash.com/photo-1620917669809-1af0497965de?w=500&auto=format",
-    category: "Skincare",
-    rating: 4.5
-  },
-  {
-    id: 2,
-    title: "Organic Lipstick",
-    price: 599,
-    image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&auto=format",
-    category: "Makeup",
-    rating: 4.3
-  },
-  {
-    id: 3,
-    title: "Vitamin C Serum",
-    price: 1299,
-    image: "https://images.unsplash.com/photo-1573575155376-b5010099301b?w=500&auto=format",
-    category: "Skincare",
-    rating: 4.7
-  },
-  {
-    id: 4,
-    title: "Hair Care Bundle",
-    price: 1999,
-    image: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=500&auto=format",
-    category: "Hair Care",
-    rating: 4.4
-  }
-];
-
-const toysProducts = [
-  {
-    id: 5,
-    title: "Educational Building Blocks",
-    price: 799,
-    image: "https://images.unsplash.com/photo-1618842676088-c4d48a6a7c9d?w=500&auto=format",
-    category: "Educational Toys",
-    rating: 4.6
-  },
-  {
-    id: 6,
-    title: "Remote Control Car",
-    price: 1499,
-    image: "https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?w=500&auto=format",
-    category: "Remote Control Toys",
-    rating: 4.2
-  },
-  {
-    id: 7,
-    title: "Plush Teddy Bear",
-    price: 499,
-    image: "https://images.unsplash.com/photo-1581557991964-125469da3b36?w=500&auto=format",
-    category: "Soft Toys",
+    title: "MacBook Pro M2",
+    price: 129999,
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format",
+    category: "Laptops",
     rating: 4.8
   },
   {
-    id: 8,
-    title: "Art & Craft Kit",
-    price: 899,
-    image: "https://images.unsplash.com/photo-1595696966465-bccd94f26897?w=500&auto=format",
-    category: "Creative Toys",
+    id: 2,
+    title: "Dell XPS 13",
+    price: 94999,
+    image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format",
+    category: "Laptops",
+    rating: 4.6
+  },
+  {
+    id: 3,
+    title: "HP Spectre x360",
+    price: 89999,
+    image: "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=500&auto=format",
+    category: "Laptops",
     rating: 4.5
+  },
+  {
+    id: 4,
+    title: "Lenovo ThinkPad",
+    price: 79999,
+    image: "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format",
+    category: "Laptops",
+    rating: 4.4
   }
 ];
 
-const trendingProducts = [
+const smartphoneProducts = [
   {
-    id: 9,
-    title: "Smart Watch",
-    price: 2999,
-    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&auto=format",
-    category: "Electronics",
+    id: 5,
+    title: "iPhone 15 Pro",
+    price: 119999,
+    image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&auto=format",
+    category: "Smartphones",
     rating: 4.7
   },
   {
-    id: 10,
-    title: "Wireless Earbuds",
-    price: 1999,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&auto=format",
-    category: "Electronics",
+    id: 6,
+    title: "Samsung S24 Ultra",
+    price: 124999,
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&auto=format",
+    category: "Smartphones",
+    rating: 4.6
+  },
+  {
+    id: 7,
+    title: "Google Pixel 8",
+    price: 69999,
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format",
+    category: "Smartphones",
+    rating: 4.5
+  },
+  {
+    id: 8,
+    title: "OnePlus 12",
+    price: 64999,
+    image: "https://images.unsplash.com/photo-1544866092-1935c5ef2a8f?w=500&auto=format",
+    category: "Smartphones",
     rating: 4.4
+  }
+];
+
+const accessoryProducts = [
+  {
+    id: 9,
+    title: "AirPods Pro",
+    price: 24999,
+    image: "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=500&auto=format",
+    category: "Accessories",
+    rating: 4.6
+  },
+  {
+    id: 10,
+    title: "Galaxy Watch 6",
+    price: 29999,
+    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format",
+    category: "Accessories",
+    rating: 4.5
   },
   {
     id: 11,
-    title: "Fitness Band",
-    price: 1499,
-    image: "https://images.unsplash.com/photo-1557408674-2c5a8f339d2f?w=500&auto=format",
-    category: "Electronics",
-    rating: 4.3
+    title: "Sony WH-1000XM5",
+    price: 27999,
+    image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=500&auto=format",
+    category: "Accessories",
+    rating: 4.8
   },
   {
     id: 12,
-    title: "Bluetooth Speaker",
-    price: 2499,
-    image: "https://images.unsplash.com/photo-1589256469067-ea99122bbdc8?w=500&auto=format",
-    category: "Electronics",
-    rating: 4.6
+    title: "iPad Pro M2",
+    price: 79999,
+    image: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format",
+    category: "Accessories",
+    rating: 4.7
   }
 ];
 
@@ -115,16 +115,58 @@ const Index = () => {
       
       <main className="pt-4 pb-8">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-            <h1 className="text-3xl font-bold mb-2">Welcome to ShopSmart</h1>
-            <p className="text-muted-foreground">Discover amazing products at great prices</p>
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-8 animate-fade-in">
+            <h1 className="text-3xl font-bold mb-2">Welcome to TechMart</h1>
+            <p className="text-muted-foreground">Your one-stop destination for premium electronics</p>
           </div>
           
-          <CategorySection title="Beauty & Personal Care" products={beautyProducts} />
-          <CategorySection title="Toys & Games" products={toysProducts} />
-          <CategorySection title="Trending Products" products={trendingProducts} />
+          <CategorySection title="Latest Laptops" products={laptopProducts} />
+          <CategorySection title="Trending Smartphones" products={smartphoneProducts} />
+          <CategorySection title="Popular Accessories" products={accessoryProducts} />
         </div>
       </main>
+
+      <footer className="bg-white shadow-sm mt-8">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">About TechMart</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-muted-foreground hover:text-primary">About Us</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Careers</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Press</a></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Customer Service</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Contact Us</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">FAQ</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Shipping Info</a></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Policy</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Return Policy</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Terms of Use</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Privacy</a></li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">Connect With Us</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Facebook</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Twitter</a></li>
+                <li><a href="#" className="text-muted-foreground hover:text-primary">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
+            <p>&copy; 2024 TechMart. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
