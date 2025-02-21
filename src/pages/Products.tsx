@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import CategorySection from '@/components/CategorySection';
 import { Button } from '@/components/ui/button';
@@ -125,6 +125,34 @@ const moreProducts = {
 
 const Products = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get('category');
+
+  const getFilteredProducts = () => {
+    if (!category) return Object.entries(moreProducts);
+
+    const categoryMap: Record<string, string> = {
+      'laptops': 'laptops',
+      'smartphones': 'phones',
+      'accessories': 'accessories'
+    };
+
+    const key = categoryMap[category];
+    if (!key) return Object.entries(moreProducts);
+
+    return [[key, moreProducts[key as keyof typeof moreProducts]]];
+  };
+
+  const filteredProducts = getFilteredProducts();
+
+  const getCategoryTitle = (key: string) => {
+    const titles: Record<string, string> = {
+      'laptops': 'Gaming & Professional Laptops',
+      'phones': 'Featured Smartphones',
+      'accessories': 'Premium Accessories'
+    };
+    return titles[key] || key;
+  };
 
   return (
     <div className="min-h-screen bg-muted">
@@ -135,8 +163,12 @@ const Products = () => {
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8 animate-fade-in">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h1 className="text-3xl font-bold mb-2">More Products</h1>
-                <p className="text-muted-foreground">Discover our extended collection of premium electronics</p>
+                <h1 className="text-3xl font-bold mb-2">
+                  {category ? `${category.charAt(0).toUpperCase() + category.slice(1)}` : 'All Products'}
+                </h1>
+                <p className="text-muted-foreground">
+                  {category ? `Browse our selection of ${category}` : 'Discover our extended collection of premium electronics'}
+                </p>
               </div>
               <Button
                 onClick={() => navigate('/')}
@@ -149,9 +181,13 @@ const Products = () => {
             </div>
           </div>
           
-          <CategorySection title="Gaming & Professional Laptops" products={moreProducts.laptops} />
-          <CategorySection title="Featured Smartphones" products={moreProducts.phones} />
-          <CategorySection title="Premium Accessories" products={moreProducts.accessories} />
+          {filteredProducts.map(([key, products]) => (
+            <CategorySection 
+              key={key} 
+              title={getCategoryTitle(key)} 
+              products={products as any[]} 
+            />
+          ))}
         </div>
       </main>
     </div>

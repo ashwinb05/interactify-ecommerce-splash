@@ -4,9 +4,15 @@ import { Search, Menu, Laptop, Smartphone, Headphones, Cpu } from 'lucide-react'
 import { Button } from './ui/button';
 import LoginDialog from './LoginDialog';
 import CartDialog from './CartDialog';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (category: string) => {
+    navigate(`/products?category=${category.toLowerCase()}`);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-primary via-primary to-secondary w-full shadow-lg animate-fade-in">
       <div className="container mx-auto px-4 py-2">
@@ -30,15 +36,27 @@ const Header = () => {
           
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-6">
-              <Button variant="ghost" className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in">
+              <Button 
+                variant="ghost" 
+                className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in"
+                onClick={() => handleCategoryClick('Laptops')}
+              >
                 <Laptop className="h-5 w-5" />
                 Laptops
               </Button>
-              <Button variant="ghost" className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in">
+              <Button 
+                variant="ghost" 
+                className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in"
+                onClick={() => handleCategoryClick('Smartphones')}
+              >
                 <Smartphone className="h-5 w-5" />
                 Phones
               </Button>
-              <Button variant="ghost" className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in">
+              <Button 
+                variant="ghost" 
+                className="text-primary-foreground flex items-center gap-2 hover:bg-white/10 transition-colors animate-fade-in"
+                onClick={() => handleCategoryClick('Accessories')}
+              >
                 <Headphones className="h-5 w-5" />
                 Accessories
               </Button>
