@@ -1,7 +1,9 @@
 
 import React from 'react';
-import { Search, ShoppingCart, Menu, Laptop, Smartphone, Headphones, UserRound } from 'lucide-react';
+import { Search, Menu, Laptop, Smartphone, Headphones } from 'lucide-react';
 import { Button } from './ui/button';
+import LoginDialog from './LoginDialog';
+import CartDialog from './CartDialog';
 
 const Header = () => {
   return (
@@ -37,14 +39,8 @@ const Header = () => {
                 Accessories
               </Button>
             </div>
-            <Button variant="ghost" className="text-primary-foreground hover:bg-white/10 transition-colors animate-fade-in flex items-center gap-2">
-              <UserRound className="h-5 w-5" />
-              Login
-            </Button>
-            <Button variant="ghost" className="text-primary-foreground flex items-center hover:bg-white/10 transition-colors animate-fade-in">
-              <ShoppingCart className="h-5 w-5 mr-2" />
-              Cart
-            </Button>
+            <LoginDialog />
+            <CartDialog />
             <Button variant="ghost" size="icon" className="md:hidden text-primary-foreground hover:bg-white/10 transition-colors">
               <Menu className="h-6 w-6" />
             </Button>
