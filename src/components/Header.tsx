@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Search, Menu, Laptop, Smartphone, Headphones } from 'lucide-react';
+import { Search, Menu, Laptop, Smartphone, Headphones, Cpu } from 'lucide-react';
 import { Button } from './ui/button';
 import LoginDialog from './LoginDialog';
 import CartDialog from './CartDialog';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,7 +12,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
-            <h1 className="text-2xl font-bold text-primary-foreground animate-float">TechMart</h1>
+            <Link to="/" className="flex items-center gap-2 group">
+              <Cpu className="h-8 w-8 text-primary-foreground group-hover:rotate-180 transition-transform duration-500" />
+              <h1 className="text-2xl font-bold text-primary-foreground animate-float">TechMart</h1>
+            </Link>
             <div className="hidden md:flex items-center bg-white/90 rounded-md shadow-sm transition-transform hover:scale-[1.02]">
               <input
                 type="text"

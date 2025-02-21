@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import CategorySection from '@/components/CategorySection';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
 
 const moreProducts = {
   laptops: [
@@ -121,6 +124,8 @@ const moreProducts = {
 };
 
 const Products = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-muted">
       <Header />
@@ -128,8 +133,20 @@ const Products = () => {
       <main className="pt-4 pb-8">
         <div className="container mx-auto px-4">
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8 animate-fade-in">
-            <h1 className="text-3xl font-bold mb-2">More Products</h1>
-            <p className="text-muted-foreground">Discover our extended collection of premium electronics</p>
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h1 className="text-3xl font-bold mb-2">More Products</h1>
+                <p className="text-muted-foreground">Discover our extended collection of premium electronics</p>
+              </div>
+              <Button
+                onClick={() => navigate('/')}
+                variant="outline"
+                className="group flex items-center gap-2 hover:bg-primary hover:text-primary-foreground transition-all"
+              >
+                <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                Return to Home
+              </Button>
+            </div>
           </div>
           
           <CategorySection title="Gaming & Professional Laptops" products={moreProducts.laptops} />
