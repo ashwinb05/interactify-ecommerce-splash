@@ -1,7 +1,9 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import CategorySection from '@/components/CategorySection';
+import { Button } from '@/components/ui/button';
+import { ChevronRight } from 'lucide-react';
 
 const laptopProducts = [
   {
@@ -121,6 +123,8 @@ const accessoryProducts = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-muted">
       <Header />
@@ -135,6 +139,16 @@ const Index = () => {
           <CategorySection title="Latest Laptops" products={laptopProducts} />
           <CategorySection title="Trending Smartphones" products={smartphoneProducts} />
           <CategorySection title="Popular Accessories" products={accessoryProducts} />
+
+          <div className="flex justify-center mt-8">
+            <Button
+              onClick={() => navigate('/products')}
+              className="group bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300"
+            >
+              View More Products
+              <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </main>
 
